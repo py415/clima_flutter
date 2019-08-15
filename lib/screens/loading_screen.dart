@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:clima/services/location.dart';
-import 'package:http/http.dart' as http;
-import 'dart:convert';
+import 'package:clima/services/networking.dart';
 
 //TODO: Remove API key when pushing to Github
 var apiKey = '***INSERT_API_KEY_HERE***';
@@ -20,34 +19,17 @@ class _LoadingScreenState extends State<LoadingScreen> {
     super.initState();
   }
 
-  void getLocation() async {
+  void getLocationData() async {
     Location location = Location();
     await location.getCurrentLocation();
 
     latitude = location.latitude;
     longitude = location.longitude;
 
-    getData();
-  }
-
-  void getData() async {
-    http.Response response = await http.get(
+    NetworkHelper networkHelper = NetworkHelper(
         'https://samples.openweathermap.org/data/2.5/weather?lat=$latitude&lon=$longitude&appid=$apiKey');
 
-    if (response.statusCode == 200) {
-      String data = response.body;
-
-      var decodedData = jsonDecode(data);
-      double temperature = decodedData['main']['temp'];
-      int condition = decodedData['weather'][0]['id'];
-      String cityName = decodedData['name'];
-
-      print(temperature);
-      print(condition);
-      print(cityName);
-    } else {
-      print(response.statusCode);
-    }
+    var weatherData = await networkHelper.getData();
   }
 
   @override
