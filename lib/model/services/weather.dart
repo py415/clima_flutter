@@ -1,5 +1,5 @@
-import 'package:clima/services/location.dart';
-import 'package:clima/services/networking.dart';
+import 'package:clima/model/services/location.dart';
+import 'package:clima/model/services/networking.dart';
 
 //TODO: Remove API key when pushing to Github
 const apiKey = '***INSERT_API_KEY_HERE***';
@@ -8,17 +8,17 @@ const openWeatherMapURL = 'https://api.openweathermap.org/data/2.5/'
 
 class WeatherModel {
   Future<dynamic> getCityWeather(String cityName) async {
-    NetworkHelper networkHelper =
+    var networkHelper =
         NetworkHelper('$openWeatherMapURL?q=$cityName&appid=$apiKey');
     var weatherData = await networkHelper.getData();
     return weatherData;
   }
 
   Future<dynamic> getLocationWeather() async {
-    Location location = Location();
+    var location = Location();
     await location.getCurrentLocation();
 
-    NetworkHelper networkHelper =
+    var networkHelper =
         NetworkHelper('$openWeatherMapURL?lat=${location.latitude}'
             '&lon=${location.longitude}&appid=$apiKey');
 
