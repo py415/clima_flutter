@@ -23,9 +23,9 @@ Clima is a location-aware weather app inspired by the beautiful designs made by 
 
 Here's a GIF of how the app works:
 
-<img src="ADD_GIF_LINK" width=250>
+<img src="https://user-images.githubusercontent.com/35745973/84608677-5d196a80-ae68-11ea-9459-3aa73b6d1fac.gif" width=250>
 
-<img src="ADD_GIF_LINK" width=250>
+<img src="https://user-images.githubusercontent.com/35745973/84608670-5559c600-ae68-11ea-9ab1-e2e42b92af0d.gif" width=250>
 
 ## APIs
 
