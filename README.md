@@ -23,9 +23,9 @@ Clima is a location-aware weather app inspired by the beautiful designs made by 
 
 Here's a GIF of how the app works:
 
-<img src="https://user-images.githubusercontent.com/35745973/84608677-5d196a80-ae68-11ea-9459-3aa73b6d1fac.gif" width=250>
+<img src="https://github.com/py415/app-resources/blob/master/flutter/ios/flutter-ios-clima.gif" width=250>
 
-<img src="https://user-images.githubusercontent.com/35745973/84608670-5559c600-ae68-11ea-9ab1-e2e42b92af0d.gif" width=250>
+<img src="https://github.com/py415/app-resources/blob/master/flutter/android/flutter-android-clima.gif" width=250>
 
 ## APIs
 
@@ -33,9 +33,11 @@ Here's a GIF of how the app works:
 
 ## Libraries
 
+- [cupertino_icons](https://github.com/flutter/cupertino_icons) - This is an asset repo containing the default set of icon assets used by Flutter's [Cupertino widgets](https://github.com/flutter/flutter/tree/master/packages/flutter/lib/src/cupertino).
+- [flutter_spinkit](https://github.com/jogboms/flutter_spinkit) - A collection of loading indicators animated with flutter. Heavily inspired by [@tobiasahlin](https://github.com/tobiasahlin)'s [SpinKit](https://github.com/tobiasahlin/SpinKit).
 - [geolocator](https://github.com/Baseflow/flutter-geolocator) - A Flutter geolocation plugin which provides easy access to platform specific location services ([FusedLocationProviderClient](https://developers.google.com/android/reference/com/google/android/gms/location/FusedLocationProviderClient) or if not available the [LocationManager](https://developer.android.com/reference/android/location/LocationManager) on Android and [CLLocationManager](https://developer.apple.com/documentation/corelocation/cllocationmanager) on iOS).
 - [http](https://github.com/dart-lang/http) - A composable, Future-based library for making HTTP requests.
-- [flutter_spinkit](https://github.com/jogboms/flutter_spinkit) - A collection of loading indicators animated with flutter. Heavily inspired by [@tobiasahlin](https://github.com/tobiasahlin)'s [SpinKit](https://github.com/tobiasahlin/SpinKit).
+- [pedantic](https://github.com/dart-lang/pedantic) - Most of the recommended lints directly implement the guidelines set out in [Effective Dart](https://dart.dev/guides/language/effective-dart).
 
 ## Credits
 
